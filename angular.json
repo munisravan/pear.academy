@@ -18,11 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              {
-               "input": "src",
-                "output": "/"
-              },
+            "assets": [             
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -85,11 +81,7 @@
               }
             ],
             "scripts": [],
-            "assets": [
-              {
-                "input": "src/",
-                "output": "/"
-              },
+            "assets": [             
               {
                 "glob": "**/*",
                 "input": "src/assets",
