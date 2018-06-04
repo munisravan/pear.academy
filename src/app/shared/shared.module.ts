@@ -62,7 +62,6 @@ import { BigInputActionComponent } from './big-input/big-input-action.component'
     MatIconModule,
     MatTooltipModule,
     MatSnackBarModule,
-
     BigInputComponent,
     BigInputActionComponent
   ]

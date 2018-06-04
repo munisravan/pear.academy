@@ -17,7 +17,7 @@ import { environment as env } from '@env/environment';
 import { NIGHT_MODE_THEME, selectorSettings, SettingsState } from './settings';
 
 @Component({
-  selector: 'anms-root',
+  selector: 'pear-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [routerTransition]
@@ -54,6 +54,10 @@ export class AppComponent implements OnInit, OnDestroy {
     private router: Router,
     private titleService: Title
   ) {}
+  public options = {
+    position: ['top', 'right'],
+    timeOut: 5000,
+};
 
   ngOnInit(): void {
     this.subscribeToSettings();

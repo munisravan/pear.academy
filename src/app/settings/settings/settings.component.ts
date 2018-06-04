@@ -12,7 +12,7 @@ import {
 } from '../settings.reducer';
 
 @Component({
-  selector: 'anms-settings',
+  selector: 'pear-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })

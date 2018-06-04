@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "/src",
       "projectType": "application",
-      "prefix": "anms",
+      "prefix": "pear",
       "schematics": {},
       "architect": {
         "build": {
@@ -31,9 +31,8 @@
               }
             ],
             "styles": [
-              {
-                "input": "src/styles.scss"
-              }
+              "./node_modules/ng-shopping-cart/styles/css/ng-shopping-cart.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },

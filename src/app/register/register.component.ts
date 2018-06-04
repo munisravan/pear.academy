@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
-  selector: 'anms-register',
+  selector: 'pear-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
