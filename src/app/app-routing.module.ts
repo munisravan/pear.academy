@@ -5,6 +5,7 @@ import { SettingsComponent } from './settings';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
+import { AuthGuardService } from './core';
 
 const routes: Routes = [
   {
@@ -32,8 +33,9 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'examples',
-    loadChildren: 'app/examples/examples.module#ExamplesModule'
+    path: 'admin',
+    loadChildren: 'app/admin/admin.module#AdminModule',
+    canActivate: [AuthGuardService]
   },
   {
     path: '**',

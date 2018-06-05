@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     });
   }
   loginFormHandler(loginFormValue) {
-    if (loginFormValue.email === 'admin@pear.acdemy' && loginFormValue.password === 'academy') {
+    if (loginFormValue.email === 'admin@pear.academy' && loginFormValue.password === 'academy') {
       this.notificationService.success('Login', 'Login Succesfull');
       this.router.navigateByUrl('/admin/dashboard');
       this.store.dispatch(new ActionAuthLogin());
