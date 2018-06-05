@@ -19,6 +19,7 @@ import { CartModule } from './cart/cart.module';
 import { PearNotificationService } from './core/services/notification.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { PearCartItem } from './cart-item';
+import { MailConfirmComponent } from './mail-confirm/mail-confirm.component';
 
 
 
@@ -43,14 +44,14 @@ import { PearCartItem } from './cart-item';
       itemType: PearCartItem, // <-- Configuration is optional
       serviceType: 'localStorage',
       serviceOptions: {
-        storageKey: 'NgShoppingCart',
+        storageKey: 'PearShoppingCart',
         clearOnError: true
       }
     }),
     SimpleNotificationsModule.forRoot(),
 
     ],
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, MailConfirmComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

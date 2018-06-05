@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { AuthGuardService } from './core';
+import { MailConfirmComponent } from './mail-confirm/mail-confirm.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'mailconfirmation',
+    component: MailConfirmComponent
   },
   {
     path: 'cart',
