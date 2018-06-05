@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'pear-cart',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  guestCheckout() {
+    this.router.navigateByUrl('guest');
+  }
+  userCheckout() {
+    this.router.navigateByUrl('guest');
+
   }
 
 }

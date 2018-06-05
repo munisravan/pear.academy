@@ -9,7 +9,7 @@ import {ShoppingCartModule} from 'ng-shopping-cart';
 @NgModule({
   imports: [
     CommonModule,
-    ShoppingCartModule,
+    ShoppingCartModule.forChild(),
     FormsModule,
     ReactiveFormsModule
   ],

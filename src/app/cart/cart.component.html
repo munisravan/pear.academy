@@ -3,6 +3,11 @@
     <pear-cart-checkout-view></pear-cart-checkout-view>
   </div>
   <div class="mb-5">
-      <pear-cart-checkout></pear-cart-checkout>
+    <button type="button" (click)="guestCheckout()" class="custom-checkout-button">
+      Checkout as guest
+    </button>
+    <button type="button"(click)="userCheckout()" class="custom-checkout-button">
+      Checkout as user
+    </button>
     </div>
 </div>

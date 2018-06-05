@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '@app/shared';
@@ -18,14 +18,21 @@ import { ShoppingCartModule } from 'ng-shopping-cart'; // <-- Import the module 
 import { CartModule } from './cart/cart.module';
 import { PearNotificationService } from './core/services/notification.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+<<<<<<< HEAD
 import { TestComponent } from './test/test.component';
 import { BookCourseComponent } from './book-course/book-course.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
+=======
+import { PearCartItem } from './cart-item';
+import { MailConfirmComponent } from './mail-confirm/mail-confirm.component';
+
+
+>>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
 
 @NgModule({
   imports: [
-    // angular
+      // angular
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
@@ -41,18 +48,26 @@ import {MatNativeDateModule} from '@angular/material';
     StaticModule,
     SettingsModule,
     CartModule,
-    SimpleNotificationsModule.forRoot(),
     // app
     AppRoutingModule,
     ShoppingCartModule.forRoot({ // <-- Add the cart module to your root module
+      itemType: PearCartItem, // <-- Configuration is optional
       serviceType: 'localStorage',
       serviceOptions: {
-        storageKey: 'NgShoppingCart',
+        storageKey: 'PearShoppingCart',
         clearOnError: true
       }
+<<<<<<< HEAD
     })
   ],
   declarations: [AppComponent, LoginComponent, RegisterComponent, TestComponent, BookCourseComponent],
+=======
+    }),
+    SimpleNotificationsModule.forRoot(),
+
+    ],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, MailConfirmComponent],
+>>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'pear-register',
@@ -11,14 +12,15 @@ export class RegisterComponent implements OnInit {
   registerFormErrors: any;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) {
-  this.registerFormErrors = {
-    name: {},
-    email: {},
-    password: {},
-    passwordConfirm: {}
-  };
+    this.registerFormErrors = {
+      name: {},
+      email: {},
+      password: {},
+      passwordConfirm: {}
+    };
   }
 
   ngOnInit() {
@@ -32,6 +34,11 @@ export class RegisterComponent implements OnInit {
     this.registerForm.valueChanges.subscribe(() => {
       this.onRegisterFormValuesChanged();
     });
+  }
+
+  registerFormHandler(registerFormvalue: any) {
+    localStorage.setItem('email', registerFormvalue.email);
+    this.router.navigateByUrl('/mailconfirmation');
   }
 
   onRegisterFormValuesChanged() {
