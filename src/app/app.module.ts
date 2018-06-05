@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
-
+import {MatStepperModule} from '@angular/material/stepper';
 import { SettingsModule } from './settings';
 import { StaticModule } from './static';
 import { NotificationsService } from 'angular2-notifications';
@@ -18,6 +18,10 @@ import { ShoppingCartModule } from 'ng-shopping-cart'; // <-- Import the module 
 import { CartModule } from './cart/cart.module';
 import { PearNotificationService } from './core/services/notification.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import { TestComponent } from './test/test.component';
+import { BookCourseComponent } from './book-course/book-course.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -26,6 +30,9 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     // core & shared
     CoreModule,
     SharedModule,
@@ -45,7 +52,7 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
       }
     })
   ],
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, TestComponent, BookCourseComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

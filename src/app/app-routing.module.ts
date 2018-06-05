@@ -5,6 +5,7 @@ import { SettingsComponent } from './settings';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
+import {BookCourseComponent} from './book-course/book-course.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,11 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+    {
+    path: 'bookcourse',
+    component: BookCourseComponent
+  },
+
   {
     path: 'examples',
     loadChildren: 'app/examples/examples.module#ExamplesModule'

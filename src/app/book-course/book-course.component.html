@@ -1,0 +1,160 @@
+<div class="container" style="padding-top:20px">
+    <div class="mb-5">
+        <mat-horizontal-stepper style="width:510px;">
+            <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                    <ng-template matStepLabel>Personal</ng-template>
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="Title">
+                            <mat-option *ngFor="let title of titles" [value]="title.value">
+                                {{ title.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="First name" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Given name" formControlName="firstCtrl" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="Sex">
+                            <mat-option *ngFor="let sex of sexes" [value]="sex.value">
+                                {{ sex.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput [matDatepicker]="picker" placeholder="Date of Birth">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Email" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Phone Number" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Address" formControlName="firstCtrl" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Post Code" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="Country">
+                            <mat-option *ngFor="let country of countries" [value]="country.value">
+                                {{ country.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="Nationality">
+                            <mat-option *ngFor="let country of countries" [value]="country.value">
+                                {{ country.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="Current occupation">
+                            <mat-option *ngFor="let occupation of occupations" [value]="occupation.value">
+                                {{ occupation.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="end end">
+                        <button mat-raised-button matStepperNext color="accent">Next</button>
+                    </div>
+
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                    <ng-template matStepLabel>Education</ng-template>
+                    <mat-checkbox>University Student</mat-checkbox> &nbsp;
+                    <mat-checkbox>Vocational Student</mat-checkbox> &nbsp;
+                    <mat-checkbox>Professional</mat-checkbox>
+
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Current institution" formControlName="secondCtrl" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Current course enrolled" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Year of Study" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Number of years of English Study" formControlName="secondCtrl" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-select placeholder="English Test completed">
+                            <mat-option *ngFor="let testtype of testtypes" [value]="testtype.value">
+                                {{ testtype.viewValue }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Total score recieved" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field style="width:100px;">
+                        <input matInput placeholder="Reading" formControlName="secondCtrl" required>
+                    </mat-form-field > &nbsp;
+                    <mat-form-field style="width:100px;">
+                        <input matInput placeholder="Writing" formControlName="secondCtrl" required>
+                    </mat-form-field >  &nbsp;
+
+                    <mat-form-field style="width:100px;">
+                        <input matInput placeholder="Listening" formControlName="secondCtrl" required>
+                    </mat-form-field>  &nbsp;
+
+                    <mat-form-field style="width:100px;">
+                        <input matInput placeholder="Speaking" formControlName="secondCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <input matInput [matDatepicker]="picker1" placeholder="Date Recieved">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="end end">
+                        <button mat-raised-button matStepperPrevious color="accent">Back</button> &nbsp; &nbsp;
+                        <button mat-raised-button matStepperNext color="accent">Next</button>
+                    </div>
+                </form>
+            </mat-step>
+            <mat-step [stepControl]="thirdFormGroup">
+                <form [formGroup]="thirdFormGroup">
+                    <ng-template matStepLabel>Payment</ng-template>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Card Number" formControlName="thirdCtrl" required>
+                    </mat-form-field>
+
+                    <mat-form-field style="width:120px;">
+                        <input matInput placeholder="CVC" formControlName="thirdCtrl" required>
+                    </mat-form-field> &nbsp;
+
+                    <mat-form-field style="width:120px;">
+                        <input matInput placeholder="Month" formControlName="thirdCtrl" required>
+                    </mat-form-field> &nbsp;
+
+                    <mat-form-field style="width:120px;">
+                        <input matInput placeholder="Year" formControlName="thirdCtrl" required>
+                    </mat-form-field> &nbsp;
+
+                    <div class="pt-24" fxLayout="row" fxLayoutAlign="end end">
+                        <button mat-raised-button matStepperPrevious color="accent">Back</button> &nbsp; &nbsp;
+                        <button mat-raised-button color="accent">Submit</button>
+                    </div>
+                </form>
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+</div>
