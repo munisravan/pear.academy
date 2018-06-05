@@ -13,9 +13,9 @@ const routes: Routes = [
     data: { title: 'Features' }
   },
   {
-    path: 'oettest',
+    path: 'enrol',
     component: OetTestComponent,
-    data: { title: 'OET Test' }
+    data: { title: 'enrol' }
   }
 ];
 
