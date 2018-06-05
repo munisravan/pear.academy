@@ -14,10 +14,10 @@ export class CartComponent implements OnInit {
   }
 
   guestCheckout() {
-    this.router.navigateByUrl('guest');
+    this.router.navigateByUrl('/book-course');
   }
   userCheckout() {
-    this.router.navigateByUrl('guest');
+    this.router.navigateByUrl('/bookcourse');
 
   }
 

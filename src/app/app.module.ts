@@ -18,17 +18,15 @@ import { ShoppingCartModule } from 'ng-shopping-cart'; // <-- Import the module 
 import { CartModule } from './cart/cart.module';
 import { PearNotificationService } from './core/services/notification.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
-<<<<<<< HEAD
+import { PearCartItem } from './cart-item';
+import { MailConfirmComponent } from './mail-confirm/mail-confirm.component';
 import { TestComponent } from './test/test.component';
 import { BookCourseComponent } from './book-course/book-course.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material';
-=======
-import { PearCartItem } from './cart-item';
-import { MailConfirmComponent } from './mail-confirm/mail-confirm.component';
 
 
->>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
+
 
 @NgModule({
   imports: [
@@ -57,17 +55,11 @@ import { MailConfirmComponent } from './mail-confirm/mail-confirm.component';
         storageKey: 'PearShoppingCart',
         clearOnError: true
       }
-<<<<<<< HEAD
-    })
-  ],
-  declarations: [AppComponent, LoginComponent, RegisterComponent, TestComponent, BookCourseComponent],
-=======
     }),
     SimpleNotificationsModule.forRoot(),
 
     ],
-  declarations: [AppComponent, LoginComponent, RegisterComponent, MailConfirmComponent],
->>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
+  declarations: [AppComponent, LoginComponent, RegisterComponent, MailConfirmComponent, TestComponent, BookCourseComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

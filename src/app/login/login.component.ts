@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       this.notificationService.success('Login', 'Login Succesfull');
       this.router.navigateByUrl('/admin/dashboard');
       this.store.dispatch(new ActionAuthLogin());
-    } else if (loginFormValue.email === 'user@pear.acdemy') {
+    } else if (loginFormValue.email === 'user@pear.academy') {
       this.router.navigateByUrl('/cart');
       this.store.dispatch(new ActionAuthLogin());
       this.notificationService.success('Login', 'Login Succesfull');

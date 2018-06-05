@@ -24,15 +24,7 @@
   @include pear-styles-reset-theme($theme);
   @include pear-app-component-theme($theme);
   @include pear-about-component-theme($theme);
-<<<<<<< HEAD
-  @include pear-todos-component-theme($theme);
-  @include pear-stock-market-component-theme($theme);
-  @include pear-parent-component-theme($theme);
-  @include pear-child-component-theme($theme);
-  @include pear-examples-component-theme($theme);
-=======
-  @include pear-big-input-component-theme($theme);
->>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
+
 }
 
 .default-theme {

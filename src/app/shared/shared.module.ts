@@ -17,15 +17,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-<<<<<<< HEAD
-
-
-=======
-import { BigInputComponent } from './big-input/big-input.component';
-import { BigInputActionComponent } from './big-input/big-input-action.component';
 import { MatTableModule } from '@angular/material/table';
->>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
+
+
+
 
 @NgModule({
   imports: [
@@ -67,15 +62,9 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
-<<<<<<< HEAD
-    MatSnackBarModule
-  
-=======
     MatSnackBarModule,
-    BigInputComponent,
-    BigInputActionComponent,
     MatTableModule
->>>>>>> 3a59febcad3997a15523757e4cd48c3a3e0180fe
+
   ]
 })
-export class SharedModule {}
+export class SharedModule { }
