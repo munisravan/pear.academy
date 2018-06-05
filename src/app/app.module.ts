@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '@app/shared';
@@ -18,10 +18,13 @@ import { ShoppingCartModule } from 'ng-shopping-cart'; // <-- Import the module 
 import { CartModule } from './cart/cart.module';
 import { PearNotificationService } from './core/services/notification.service';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import { PearCartItem } from './cart-item';
+
+
 
 @NgModule({
   imports: [
-    // angular
+      // angular
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
@@ -34,17 +37,19 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
     StaticModule,
     SettingsModule,
     CartModule,
-    SimpleNotificationsModule.forRoot(),
     // app
     AppRoutingModule,
     ShoppingCartModule.forRoot({ // <-- Add the cart module to your root module
+      itemType: PearCartItem, // <-- Configuration is optional
       serviceType: 'localStorage',
       serviceOptions: {
         storageKey: 'NgShoppingCart',
         clearOnError: true
       }
-    })
-  ],
+    }),
+    SimpleNotificationsModule.forRoot(),
+
+    ],
   declarations: [AppComponent, LoginComponent, RegisterComponent],
   providers: [],
   bootstrap: [AppComponent]
